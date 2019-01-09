@@ -1,0 +1,51 @@
+---
+title: "Artists"
+output: html_document
+---
+
+```{r setup}
+library(reticulate)
+use_python("/usr/local/bin/python", required = TRUE)
+
+library(odbc)
+con <- dbConnect(odbc::odbc(), 
+                 .connection_string = "Driver={SQLite Driver};Database=data/chinook.db", 
+                 timeout = 10)
+
+```
+
+```{sql connection=con, output.var=spending}
+SELECT customers.CustomerId, customers.LastName, invoices.Total
+FROM customers, invoices
+WHERE invoices.CustomerId = customers.CustomerId
+```
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+# Clear any previous plots
+plt.clf()
+
+# Group by customer ID
+grouped = r.spending.groupby(["CustomerId", "LastName"])
+spenders = grouped.sum().reset_index()
+
+# Create a list of the top spenders
+top_spenders = grouped.sum().sort_values("Total", ascending = False).head(5)
+top_spenders.reset_index(inplace = True)
+
+# Create a plot 
+customers = list(top_spenders['LastName'])
+y_pos = np.arange(len(customers))
+plt.bar(y_pos, top_spenders['Total'])
+plt.xticks(y_pos, customers)
+plt.title("Top 5 Spending Customers")
+plt.show()
+```
+
+```{r}
+py$spenders
+```
+
