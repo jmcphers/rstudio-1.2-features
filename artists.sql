@@ -1,6 +1,4 @@
 -- !preview conn=con
 
-SELECT albums.Title, artists.Name 
-FROM "albums", "artists" 
+SELECT * FROM "albums", "artists"
 WHERE albums.ArtistId = artists.ArtistId
-

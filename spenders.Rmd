@@ -1,6 +1,6 @@
 ---
 title: "Top Spender Analysis"
-output: html_document
+output: html_notebook
 ---
 
 ```{r setup}
@@ -22,10 +22,6 @@ WHERE invoices.CustomerId = customers.CustomerId
 ```
 
 ```{python}
-print sys.version_info
-```
-
-```{python}
 import pandas as pd
 
 # Group by customer ID
@@ -42,20 +38,18 @@ print top_spenders
 py$spenders
 ```
 
+
+
 ```{python}
 import matplotlib.pyplot as plt
+import numpy as np
 plt.clf()
 
 customers = list(top_spenders['LastName'])
 y_pos = np.arange(len(customers))
 plt.bar(y_pos, top_spenders['Total'])
-# plt.plot(y_pos)
 plt.xticks(y_pos, customers)
 plt.title("Top 5 Spending Customers")
-plt.show()
-```
-
-```{python}
 plt.show()
 ```
 
