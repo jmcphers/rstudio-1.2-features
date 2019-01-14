@@ -34,11 +34,6 @@ top_spenders.reset_index(inplace = True)
 print top_spenders
 ```
 
-```{r}
-py$spenders
-```
-
-
 
 ```{python}
 import matplotlib.pyplot as plt

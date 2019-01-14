@@ -4,7 +4,7 @@
 
 // Initialization
 svg.attr("font-family", "sans-serif")
-  .attr("font-size", "12")
+  .attr("font-size", "8")
   .attr("text-anchor", "middle");
     
 var svgSize = 600;
