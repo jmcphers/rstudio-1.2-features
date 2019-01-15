@@ -37,5 +37,7 @@ Sys.sleep(1)
 
 message("Task complete.")
 
-mtcars <- data(mtcars)
+job_results <- data.frame(a = c(1, 1),
+                          b = c(2, 2),
+                          c = c(3, 3))
 
