@@ -13,6 +13,7 @@ Many of these slides are based on material from our extended series of blog post
 - [Stan Support](https://blog.rstudio.com/2018/10/16/rstudio-1-2-preview-stan/)
 - [Plumber Support](https://blog.rstudio.com/2018/10/23/rstudio-1-2-preview-plumber-integration/)
 - [Custom Theme Support](https://blog.rstudio.com/2018/10/29/rstudio-ide-custom-theme-support/)
+- [Background Job Support](https://blog.rstudio.com/2019/03/14/rstudio-1-2-jobs/)
 - [New Features in RStudio Pro](https://blog.rstudio.com/2018/11/05/rstudio-rsp-1.2-features/)
 - [The Little Things](https://blog.rstudio.com/2018/11/19/rstudio-1-2-preview-the-little-things/)
 
