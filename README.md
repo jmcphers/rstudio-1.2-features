@@ -1,6 +1,8 @@
 # Language Features in RStudio 1.2
 
-This repository contains materials for a talk at [rstudio::conf](https://www.rstudio.com/conference/) on language (and other) features in RStudio 1.2.
+This repository contains materials for a talk at [rstudio::conf](https://www.rstudio.com/conference/) on language (and other) features in RStudio 1.2. You can watch the talk here:
+
+[New Language Features in RStudio 1.2](https://resources.rstudio.com/rstudio-conf-2019/new-language-features-in-rstudio)
 
 ## RStudio 1.2 Blog Series
 
